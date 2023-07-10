@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-
+import styles from "../css/styles.css"
 
 
 export const Register =(props) => {
@@ -16,7 +16,8 @@ export const Register =(props) => {
 
 
     return(
-        <div className="auth-form-container">
+        <div className="form">
+ <div className="auth-form-container">
             <h2>Register</h2>
             <form className="register-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">Full name</label>
@@ -35,6 +36,8 @@ export const Register =(props) => {
             <button className="link-btn" onClick={()=>props.onFormSwitch('login')}>Already have and account? Login here</button>
 
         </div>
+        </div>
+       
     )
 
 }

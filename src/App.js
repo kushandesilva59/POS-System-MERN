@@ -2,21 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 
 import React,{useState} from "react";
-import {Login} from '../src/components/LoginForm'
-import {Register} from "../src/components/RegisterForm"
+import {Login} from './components/loginForm/LoginForm'
+import {Register} from "./components/registerForm/RegisterForm"
+import { Header } from './components/header/Header';
+import { About } from './components/about/About';
+import { Form } from './components/form/Form';
+import { Footer } from './components/footer/Footer';
+
 
 function App() {
-    const [currentForm, setCurrentForm] = useState("r")
-
-    const toggleForm = (formName) => {
-        setCurrentForm(formName);
-    }
-
+ 
   return (
     <div className="App">
-        {
-            currentForm === "login" ?   <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
-        }
+{/*        
+    <Header/> 
+    <About/> */}
+       
+       <Header/>
+       <About/>
+       <Footer/>
+    
     </div>
   );
 }

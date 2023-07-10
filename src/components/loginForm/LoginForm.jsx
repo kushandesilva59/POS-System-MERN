@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import styles from "../css/styles.css"
 
 export const Login =(props) => {
     const [email,setEmail]  = useState("");
@@ -11,7 +12,8 @@ export const Login =(props) => {
     }
 
     return(
-        <div className="auth-form-container">
+<div className="form">
+<div className="auth-form-container">
             <h2>Login</h2>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">email</label>
@@ -25,6 +27,9 @@ export const Login =(props) => {
 
             <button className="link-btn" onClick={()=>props.onFormSwitch('register')}>Don't have and account? Register here</button>
         </div>
+</div>
+
+       
 
     )
 
